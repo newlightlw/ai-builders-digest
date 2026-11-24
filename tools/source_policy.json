@@ -1,0 +1,1787 @@
+{
+  "schema_version": "digest-source-policy/1",
+  "scope": "固定编辑日包白名单；不删除原采集档案，也不修改上游采集配置",
+  "daily_topic_target": 4,
+  "max_developer_tool_topics": 1,
+  "source_item_cap": 15,
+  "caps": {
+    "arxiv": 12,
+    "hf_papers": 12,
+    "hn_show": 15,
+    "follow_builders": 25,
+    "github_trending": 10,
+    "github_repository": 10,
+    "ithome": 15,
+    "36kr": 12
+  },
+  "sources": [
+    {
+      "source_id": "github_changelog",
+      "name": "GitHub Changelog",
+      "homepage": "https://github.blog/changelog/",
+      "decision": "keep",
+      "group": "工程与开发实践",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://github.blog/changelog/feed/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "hf_blog",
+      "name": "Hugging Face Blog",
+      "homepage": "https://huggingface.co/blog",
+      "decision": "keep",
+      "group": "论文与研究",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://huggingface.co/blog/feed.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 2,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "google_ai_topic",
+      "name": "Google AI主题博客",
+      "homepage": "https://blog.google/innovation-and-ai/technology/ai/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "与Gemini/DeepMind/Google Research专题高度交叉，包层保留更具体官方栏目",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "google_research",
+      "name": "Google Research Blog",
+      "homepage": "https://research.google/blog/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://research.google/blog/rss/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "openai_news",
+      "name": "OpenAI News",
+      "homepage": "https://openai.com/news/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://openai.com/news/rss.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "aibase",
+      "name": "AIbase",
+      "homepage": "https://news.aibase.com/zh/news",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "聚合与二次转述较多，已保留IT之家、36氪及厂商原始公告",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://news.aibase.com/zh/news",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 20,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "the_decoder",
+      "name": "The Decoder",
+      "homepage": "https://the-decoder.com/",
+      "decision": "keep",
+      "group": "独立媒体与产业",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "日内滚动／高频；并非每条都属于AI",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://the-decoder.com/feed/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 21,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "claude_articles",
+      "name": "Claude官方文章",
+      "homepage": "https://claude.com/resources/articles",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://claude.com/resources/articles",
+          "adapter": "html"
+        },
+        {
+          "url": "https://claude.com/sitemap.xml",
+          "adapter": "sitemap"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 9,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "ithome",
+      "name": "IT之家",
+      "homepage": "https://www.ithome.com/",
+      "decision": "keep",
+      "group": "独立媒体与产业",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "日内滚动／高频；并非每条都属于AI",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.ithome.com/rss/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 60,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "cursor_blog",
+      "name": "Cursor Blog",
+      "homepage": "https://cursor.com/blog",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "当前编辑入口保留更新日志；深度博客按需检索，避免开发工具占比膨胀",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://cursor.com/blog",
+          "adapter": "html"
+        },
+        {
+          "url": "https://cursor.com/sitemap_index.xml",
+          "adapter": "sitemap"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "cursor_changelog",
+      "name": "Cursor Changelog",
+      "homepage": "https://cursor.com/changelog",
+      "decision": "keep",
+      "group": "工程与开发实践",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://cursor.com/changelog/rss.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "emad_mostaque",
+      "name": "Emad Mostaque",
+      "homepage": "https://ii.inc/blog",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "当前实际入口为团队博客，不能代表本人X；人物动态由follow-builders统一作为线索",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://ii.inc/blog",
+          "adapter": "html"
+        },
+        {
+          "url": "https://ii.inc/sitemap.xml",
+          "adapter": "sitemap"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "semianalysis",
+      "name": "SemiAnalysis",
+      "homepage": "https://semianalysis.com/",
+      "decision": "keep",
+      "group": "独立媒体与产业",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://newsletter.semianalysis.com/feed",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "openclaw_news",
+      "name": "OpenClaw官方内容",
+      "homepage": "https://openclaw.ai/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "窄工具来源，重点仓库发布及GitHub变更足以发现，按需补查",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://openclaw.ai/rss.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "xiaohongshu_tech_wechat",
+      "name": "小红书技术REDtech",
+      "homepage": "https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg%3D%3D&mid=2247496927&idx=1&sn=5bdb6dfef74cdd8442eef924e7ad9c15",
+      "decision": "keep",
+      "group": "中文应用案例",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://wechat2rss.bestblogs.dev/feed/0f8c47df6fd304112518544776e0bbf1d98ba0b9.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "kazike_wechat",
+      "name": "数字生命卡兹克",
+      "homepage": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647688028&idx=1&sn=e509269da2e0e0b4d4dfbb121b42204b",
+      "decision": "keep",
+      "group": "中文应用案例",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://wechat2rss.bestblogs.dev/feed/ff621c3e98d6ae6fceb3397e57441ffc6ea3c17f.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 9,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "waytoagi",
+      "name": "WaytoAGI社区日报",
+      "homepage": "https://daily.waytoagi.com/",
+      "decision": "keep",
+      "group": "产品发现与玩法",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "每日榜单、收录或汇编；可能有空档",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://daily.waytoagi.com/rss.xml",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://daily.waytoagi.com",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "techcrunch_ai",
+      "name": "TechCrunch AI",
+      "homepage": "https://techcrunch.com/category/artificial-intelligence/",
+      "decision": "keep",
+      "group": "独立媒体与产业",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "日内滚动／高频；并非每条都属于AI",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 20,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "ai_news",
+      "name": "Artificial Intelligence News",
+      "homepage": "https://www.artificialintelligence-news.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "宽泛二次媒体，与已保留独立媒体重叠较多",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.artificialintelligence-news.com/feed/",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://www.artificialintelligence-news.com/",
+          "adapter": "html"
+        },
+        {
+          "url": "https://www.artificialintelligence-news.com/news/tag/artificial-intelligence/",
+          "adapter": "html"
+        },
+        {
+          "url": "https://www.artificialintelligence-news.com/categories/inside-ai/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 22,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "marktechpost",
+      "name": "MarkTechPost",
+      "homepage": "https://www.marktechpost.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "论文二次改写较多，优先arXiv/HF原始研究发现",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.marktechpost.com/wp-json/wp/v2/posts",
+          "adapter": "wordpress"
+        },
+        {
+          "url": "https://www.marktechpost.com/feed/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 11,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "verge_ai",
+      "name": "The Verge AI",
+      "homepage": "https://www.theverge.com/ai-artificial-intelligence",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "二次科技报道与现有海外媒体重叠，按需补证",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 10,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "claude_code_releases",
+      "name": "Claude Code Releases",
+      "homepage": "https://github.com/anthropics/claude-code/releases",
+      "decision": "keep",
+      "group": "工程与开发实践",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/repos/anthropics/claude-code/releases?per_page=100",
+          "adapter": "github_releases"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "hn_top",
+      "name": "Hacker News热点",
+      "homepage": "https://news.ycombinator.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "泛HN投稿量过大且包含非AI；保留Show HN中AI相关产品发现",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://hn.algolia.com/api/v1/search_by_date",
+          "adapter": "hn"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 2768,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "v2ex",
+      "name": "V2EX技术与AI节点",
+      "homepage": "https://www.v2ex.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "泛技术社区噪声高，无法用来源级白名单保证AI相关",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.v2ex.com/feed/tab/tech.xml",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://www.v2ex.com/feed/claude.json",
+          "adapter": "jsonfeed"
+        },
+        {
+          "url": "https://www.v2ex.com/feed/openai.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 131,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "readhub_ai",
+      "name": "Readhub AI",
+      "homepage": "https://readhub.cn/news/ai",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "聚合转述，与厂商原稿及IT之家重复",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://readhub.cn/news/ai",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 10,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "huxiu",
+      "name": "虎嗅",
+      "homepage": "https://www.huxiu.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "当前连接不稳定且聚合重复较高，暂不进入固定日包",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.huxiu.com/rss/0.xml",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://www.huxiu.com/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "github_trending",
+      "name": "GitHub Trending日周榜",
+      "homepage": "https://github.com/trending",
+      "decision": "keep",
+      "group": "工程与开发实践",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "每日榜单、收录或汇编；可能有空档",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://github.com/trending?since=daily",
+          "adapter": "trending"
+        },
+        {
+          "url": "https://github.com/trending?since=weekly",
+          "adapter": "trending"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 10,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "techmeme",
+      "name": "Techmeme",
+      "homepage": "https://techmeme.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "聚合重复较高，按需作为发现线索",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://techmeme.com/feed.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 15,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "google_news",
+      "name": "Google News",
+      "homepage": "https://news.google.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "既有许可约束，保持禁用",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [],
+      "observed_status": "blocked",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "36kr",
+      "name": "36氪",
+      "homepage": "https://www.36kr.com/",
+      "decision": "keep",
+      "group": "独立媒体与产业",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "日内滚动／高频；并非每条都属于AI",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.36kr.com/feed-article",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 50,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "yahoo_finance",
+      "name": "Yahoo Finance",
+      "homepage": "https://finance.yahoo.com/",
+      "decision": "keep",
+      "group": "商业与披露",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "日内滚动／高频；并非每条都属于AI",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://finance.yahoo.com/rss/headline?s=NVDA,MSFT,GOOG,META,BABA&region=US&lang=en-US",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 15,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "bloomberg_tech",
+      "name": "Bloomberg Technology",
+      "homepage": "https://www.bloomberg.com/technology",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "付费/标题级证据较多；市场事实优先官方披露，必要时编辑另补证",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.bloomberg.com/feeds/technology/news.rss",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 20,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "techradar_ai",
+      "name": "TechRadar AI",
+      "homepage": "https://www.techradar.com/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "消费科技二次稿与产品原始入口重复",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.techradar.com/feeds/tag/artificial-intelligence",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "follow_builders",
+      "name": "follow-builders",
+      "homepage": "https://github.com/zarazhangrui/follow-builders",
+      "decision": "keep",
+      "group": "人物与组织判断",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "每日榜单、收录或汇编；可能有空档",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://github.com/zarazhangrui/follow-builders/commits/main/feed-x.json.atom",
+          "adapter": "follow"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 214,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "anthropic_news",
+      "name": "Anthropic News",
+      "homepage": "https://www.anthropic.com/news",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.anthropic.com/news",
+          "adapter": "html"
+        },
+        {
+          "url": "https://www.anthropic.com/sitemap.xml",
+          "adapter": "sitemap"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "anthropic_engineering",
+      "name": "Anthropic Engineering",
+      "homepage": "https://www.anthropic.com/engineering",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.anthropic.com/engineering",
+          "adapter": "html"
+        },
+        {
+          "url": "https://www.anthropic.com/sitemap.xml",
+          "adapter": "sitemap"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "deepmind",
+      "name": "Google DeepMind Blog",
+      "homepage": "https://deepmind.google/blog/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://deepmind.google/blog/rss.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "gemini_blog",
+      "name": "Gemini官方博客",
+      "homepage": "https://blog.google/products/gemini/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/gemini/rss/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "microsoft_ai",
+      "name": "Microsoft AI Source",
+      "homepage": "https://news.microsoft.com/source/topics/ai/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://news.microsoft.com/source/topics/ai/feed/",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://news.microsoft.com/source/topics/ai/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "microsoft_research",
+      "name": "Microsoft Research",
+      "homepage": "https://www.microsoft.com/en-us/research/blog/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.microsoft.com/en-us/research/feed/",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/research/blog/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "meta_ai",
+      "name": "Meta AI Blog",
+      "homepage": "https://ai.meta.com/blog/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://ai.meta.com/blog/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "nvidia_blog",
+      "name": "NVIDIA Blog",
+      "homepage": "https://blogs.nvidia.com/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://blogs.nvidia.com/feed/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "nvidia_technical",
+      "name": "NVIDIA Technical Blog",
+      "homepage": "https://developer.nvidia.com/blog/",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://developer.nvidia.com/blog/feed/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "tesla_ir",
+      "name": "Tesla IR",
+      "homepage": "https://ir.tesla.com/",
+      "decision": "keep",
+      "group": "具身与物理AI",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://ir.tesla.com/press",
+          "adapter": "html"
+        },
+        {
+          "url": "https://ir.tesla.com/rss/news-releases.xml",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001318605.json",
+          "adapter": "sec"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 6,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "xai_news",
+      "name": "xAI News",
+      "homepage": "https://x.ai/news",
+      "decision": "keep",
+      "group": "海外厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://x.ai/news",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 2,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "hf_papers",
+      "name": "Hugging Face Papers",
+      "homepage": "https://huggingface.co/papers",
+      "decision": "keep",
+      "group": "论文与研究",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "每日榜单、收录或汇编；可能有空档",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://huggingface.co/api/daily_papers",
+          "adapter": "hf"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 76,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "arxiv",
+      "name": "arXiv研究发现",
+      "homepage": "https://arxiv.org/",
+      "decision": "keep",
+      "group": "论文与研究",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "按arXiv工作日公告；实际按抓取窗口核验",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://export.arxiv.org/api/query",
+          "adapter": "arxiv"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 995,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "github_repository",
+      "name": "重点GitHub仓库元信息与Releases",
+      "homepage": "https://docs.github.com/en/rest",
+      "decision": "keep",
+      "group": "工程与开发实践",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/repos/openai/codex/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases.atom",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://api.github.com/repos/google-gemini/gemini-cli/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://api.github.com/repos/huggingface/transformers/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://api.github.com/repos/langchain-ai/langgraph/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://api.github.com/repos/vllm-project/vllm/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://api.github.com/repos/sgl-project/sglang/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://api.github.com/repos/microsoft/autogen/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://api.github.com/repos/deepseek-ai/deepseek-harness/releases?per_page=100",
+          "adapter": "github_releases"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 14,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "product_hunt",
+      "name": "Product Hunt",
+      "homepage": "https://www.producthunt.com/",
+      "decision": "keep",
+      "group": "产品发现与玩法",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "每日榜单、收录或汇编；可能有空档",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.producthunt.com/feed",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 36,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "hn_show",
+      "name": "Show HN",
+      "homepage": "https://news.ycombinator.com/show",
+      "decision": "keep",
+      "group": "产品发现与玩法",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "日内滚动／高频；并非每条都属于AI",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://hn.algolia.com/api/v1/search_by_date",
+          "adapter": "hn"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 411,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "betalist",
+      "name": "BetaList",
+      "homepage": "https://betalist.com/",
+      "decision": "keep",
+      "group": "产品发现与玩法",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "每日榜单、收录或汇编；可能有空档",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://feeds.feedburner.com/BetaList",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 25,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "yc_launch",
+      "name": "YC Launch",
+      "homepage": "https://www.ycombinator.com/launches",
+      "decision": "keep",
+      "group": "产品发现与玩法",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.ycombinator.com/launches",
+          "adapter": "yc"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 6,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "simon_willison",
+      "name": "Simon Willison",
+      "homepage": "https://simonwillison.net/",
+      "decision": "keep",
+      "group": "工程与开发实践",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://simonwillison.net/atom/everything/",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 7,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "sam_altman",
+      "name": "Sam Altman个人博客",
+      "homepage": "https://blog.samaltman.com/",
+      "decision": "keep",
+      "group": "人物与组织判断",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://blog.samaltman.com/posts.atom",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://blog.samaltman.com/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 17,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "dario_amodei",
+      "name": "Dario Amodei个人文章",
+      "homepage": "https://darioamodei.com/",
+      "decision": "keep",
+      "group": "人物与组织判断",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://darioamodei.com/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "alibaba_qwen",
+      "name": "阿里/千问官方技术",
+      "homepage": "https://qwen.ai/blog",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/QwenLM/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://api.github.com/repos/QwenLM/qwen-code/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://www.alibabagroup.com/en-US/ir-financial-reports-financial-results",
+          "adapter": "html_documents"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 29,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "bytedance_seed",
+      "name": "字节Seed/火山官方",
+      "homepage": "https://seed.bytedance.com/en/",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://seed.bytedance.com/en/research",
+          "adapter": "html_cards"
+        },
+        {
+          "url": "https://developer.volcengine.com/articles",
+          "adapter": "html_cards"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "tencent_hunyuan",
+      "name": "腾讯混元/元宝官方",
+      "homepage": "https://github.com/Tencent-Hunyuan",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/Tencent-Hunyuan/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://www.tencent.com/investors/investor-news/",
+          "adapter": "html_cards"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "xiaomi_mimo",
+      "name": "小米MiMo/产品官方",
+      "homepage": "https://github.com/XiaomiMiMo",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/XiaomiMiMo/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://api.github.com/repos/XiaomiMiMo/MiMo-Code/releases?per_page=100",
+          "adapter": "github_releases"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 2,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "zhipu",
+      "name": "智谱官方",
+      "homepage": "https://github.com/zai-org",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/zai-org/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://api.github.com/repos/zai-org/ZCode/releases?per_page=100",
+          "adapter": "github_releases"
+        },
+        {
+          "url": "https://docs.bigmodel.cn/llms.txt",
+          "adapter": "markdown_index"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "stepfun",
+      "name": "阶跃星辰官方",
+      "homepage": "https://www.stepfun.com/",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/stepfun-ai/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "minimax",
+      "name": "MiniMax官方",
+      "homepage": "https://www.minimax.io/news",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/MiniMax-AI/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://www.minimax.io/blog",
+          "adapter": "html_cards"
+        },
+        {
+          "url": "https://ir.minimax.io/news-events/new-releases",
+          "adapter": "html_cards"
+        },
+        {
+          "url": "https://platform.minimax.io/docs/release-notes/models",
+          "adapter": "dated_sections"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 9,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "deepseek",
+      "name": "DeepSeek官方",
+      "homepage": "https://api-docs.deepseek.com/",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/deepseek-ai/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://api-docs.deepseek.com/updates",
+          "adapter": "dated_sections"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "kimi",
+      "name": "Kimi官方",
+      "homepage": "https://platform.kimi.com/docs/llms.txt",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/MoonshotAI/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://platform.kimi.com/docs/llms.txt",
+          "adapter": "markdown_index"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 11,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "baidu",
+      "name": "百度官方技术与IR",
+      "homepage": "https://github.com/PaddlePaddle",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/PaddlePaddle/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://api.github.com/repos/PaddlePaddle/PaddleHelix/releases?per_page=100",
+          "adapter": "github_releases"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "huawei",
+      "name": "华为盘古/年报",
+      "homepage": "https://www.huaweicloud.com/product/pangu.html",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.huawei.com/cn/annual-report",
+          "adapter": "html"
+        },
+        {
+          "url": "https://www.huawei.com/cn/news/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "kuaishou_kling",
+      "name": "快手/可灵官方",
+      "homepage": "https://www.klingai.com/",
+      "decision": "keep",
+      "group": "国内厂商与模型",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/KlingAIResearch/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "unitree",
+      "name": "宇树官方",
+      "homepage": "https://www.unitree.com/cn/news/",
+      "decision": "keep",
+      "group": "具身与物理AI",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/unitreerobotics/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        },
+        {
+          "url": "https://www.unitree.com/cn/news/",
+          "adapter": "html_cards"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 5,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "agibot",
+      "name": "智元官方开发",
+      "homepage": "https://github.com/AgibotTech",
+      "decision": "keep",
+      "group": "具身与物理AI",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://api.github.com/orgs/AgibotTech/repos?sort=updated&direction=desc&per_page=10",
+          "adapter": "github_org_repos"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 4,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "figure",
+      "name": "Figure官方",
+      "homepage": "https://www.figure.ai/news",
+      "decision": "keep",
+      "group": "具身与物理AI",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.figure.ai/news",
+          "adapter": "html_cards"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "physical_intelligence",
+      "name": "Physical Intelligence官方",
+      "homepage": "https://www.pi.website/blog",
+      "decision": "keep",
+      "group": "具身与物理AI",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.pi.website/blog",
+          "adapter": "html_cards"
+        }
+      ],
+      "observed_status": "failed",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "boston_dynamics",
+      "name": "Boston Dynamics官方",
+      "homepage": "https://bostondynamics.com/blog/",
+      "decision": "keep",
+      "group": "具身与物理AI",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://bostondynamics.com/feed/",
+          "adapter": "feed"
+        },
+        {
+          "url": "https://bostondynamics.com/blog/",
+          "adapter": "html_cards"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 3,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "nvidia_ir",
+      "name": "NVIDIA IR",
+      "homepage": "https://investor.nvidia.com/",
+      "decision": "keep",
+      "group": "商业与披露",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "定期报告＋事件披露",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://nvidianews.nvidia.com/cats/press_release.xml",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 1,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "sec_edgar",
+      "name": "SEC EDGAR",
+      "homepage": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "decision": "keep",
+      "group": "商业与披露",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "定期报告＋事件披露",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001045810.json",
+          "adapter": "sec"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+          "adapter": "sec"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+          "adapter": "sec"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001326801.json",
+          "adapter": "sec"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001318605.json",
+          "adapter": "sec"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001577552.json",
+          "adapter": "sec"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 57,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "hkexnews",
+      "name": "港交所披露易",
+      "homepage": "https://www.hkexnews.hk/index.htm",
+      "decision": "keep",
+      "group": "商业与披露",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "定期报告＋事件披露",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
+          "adapter": "hkex_query"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 7,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "cninfo",
+      "name": "巨潮资讯",
+      "homepage": "https://www.cninfo.com.cn/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "现配置为泛关键词标题样本，AI相关性及发行人范围不足；需定向公司配置后再启用",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.cninfo.com.cn/new/hisAnnouncement/query",
+          "adapter": "cninfo_query"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "ai_bot_tools",
+      "name": "AI工具集",
+      "homepage": "https://ai-bot.cn/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "滚动工具目录且当前TLS失败，产品发现由PH/BetaList/YC/FutureTools覆盖",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://ai-bot.cn/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "failed",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "futuretools",
+      "name": "FutureTools",
+      "homepage": "https://futuretools.io/",
+      "decision": "keep",
+      "group": "产品发现与玩法",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://futuretools.io/newly-added",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 10,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "one_useful_thing",
+      "name": "One Useful Thing / Ethan Mollick",
+      "homepage": "https://www.oneusefulthing.org/",
+      "decision": "keep",
+      "group": "人物与组织判断",
+      "reason": "独特的一手证据、产品发现或补证价值；记录级仍需过滤与去重",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.oneusefulthing.org/feed",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "mit_news_ai",
+      "name": "MIT News / Artificial intelligence",
+      "homepage": "https://news.mit.edu/topic/artificial-intelligence2",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "研究宣传层；固定论文入口优先arXiv/HF，大学新闻按需补查",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://news.mit.edu/rss/topic/artificial-intelligence2",
+          "adapter": "feed"
+        }
+      ],
+      "observed_status": "ok",
+      "observed_count": 2,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "workbuddy_official",
+      "name": "WorkBuddy官方文档与更新日志",
+      "homepage": "https://www.workbuddy.cn/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "窄开发工具更新，暂不占用固定入口；开发主题已有GitHub官方变更与仓库发布，按需补查",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.workbuddy.cn/docs/workbuddy/Changelog",
+          "adapter": "dated_sections"
+        }
+      ],
+      "observed_status": "empty_partial",
+      "observed_count": 0,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "canva_design_school",
+      "name": "Canva Design School",
+      "homepage": "https://www.canva.com/design-school/",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "课程/教程常青内容，不适合作为每日增量新闻",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.canva.com/design-school/",
+          "adapter": "html"
+        },
+        {
+          "url": "https://www.canva.com/newsroom/news/",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 10,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    },
+    {
+      "source_id": "shopify_blog",
+      "name": "Shopify官方电商与营销博客",
+      "homepage": "https://www.shopify.com/zh/blog",
+      "decision": "exclude",
+      "group": "按需或停用",
+      "reason": "宽泛电商与营销内容，AI信号密度不足",
+      "update_frequency": "事件驱动／不定期发布（不承诺日更）",
+      "polling_frequency": "每日18:00采集；次日9:00编辑消费",
+      "acquisition": [
+        {
+          "url": "https://www.shopify.com/zh/blog/latest",
+          "adapter": "html"
+        }
+      ],
+      "observed_status": "partial",
+      "observed_count": 21,
+      "coverage_checked_at": "2026-11-24T18:05:20.756572+08:00"
+    }
+  ]
+}

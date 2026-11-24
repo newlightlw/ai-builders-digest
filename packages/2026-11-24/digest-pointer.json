@@ -1,8 +1,10 @@
 {
   "date": "2026-11-24",
+  "status": "archived",
   "digest_path": "2026-11-24.md",
-  "commit": "8cc7d3871e5ed1e41a3e38bb57700d135e2a783d",
-  "size": 6186,
+  "commit_sha": "cd76762ab56d26a0076f708dc15e28df52a398bb",
   "sha256": "999f6b71d1d0afa6fc8e477560f47087eb36e5f313fe4165417241bd99b328cd",
-  "raw": "https://raw.githubusercontent.com/newlightlw/ai-builders-digest/main/2026-11-24.md"
+  "relationship": "existing_same_calendar_date_remix; not generated from this later collection package",
+  "digest_cutoff": null,
+  "collection_cutoff": "2026-11-24T18:05:20.756572+08:00"
 }

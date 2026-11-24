@@ -1,9 +1,86 @@
 {
+  "schema_version": "clean-daily-package/1",
   "date": "2026-11-24",
-  "type": "clean_daily_package",
-  "version": "1",
   "status": "ready",
-  "commit_sha": "8cc7d3871e5ed1e41a3e38bb57700d135e2a783d",
-  "cutoff": "2026-11-24 09:01:02 +0800",
-  "digest": { "path": "2026-11-24.md", "sha256": "999f6b71d1d0afa6fc8e477560f47087eb36e5f313fe4165417241bd99b328cd", "size": 6186 }
+  "cutoff": "2026-11-24T18:05:20.756572+08:00",
+  "created_at": "2026-11-24T19:30:44.676483+08:00",
+  "input_fingerprint": "658872302ad5db118cb484e733fe2fdcf1997b297931429f6f07608a32d915c0",
+  "input_counts": {
+    "records": 5242,
+    "incremental": 2881,
+    "sources": 83
+  },
+  "retained_source_count": 61,
+  "excluded_source_count": 22,
+  "clean_incremental_count": 195,
+  "source_counts": {
+    "agibot": 1,
+    "alibaba_qwen": 2,
+    "baidu": 3,
+    "claude_articles": 4,
+    "deepmind": 1,
+    "deepseek": 1,
+    "gemini_blog": 3,
+    "google_research": 1,
+    "minimax": 1,
+    "nvidia_blog": 1,
+    "nvidia_technical": 3,
+    "openai_news": 3,
+    "tencent_hunyuan": 1,
+    "tesla_ir": 1,
+    "unitree": 2,
+    "xiaomi_mimo": 1,
+    "arxiv": 12,
+    "claude_code_releases": 1,
+    "github_changelog": 4,
+    "github_repository": 9,
+    "github_trending": 1,
+    "hf_blog": 2,
+    "hf_papers": 12,
+    "hkexnews": 5,
+    "nvidia_ir": 1,
+    "sec_edgar": 8,
+    "simon_willison": 5,
+    "yahoo_finance": 9,
+    "betalist": 11,
+    "follow_builders": 25,
+    "hn_show": 15,
+    "product_hunt": 2,
+    "sam_altman": 2,
+    "yc_launch": 4,
+    "36kr": 7,
+    "ithome": 10,
+    "kazike_wechat": 1,
+    "techcrunch_ai": 11,
+    "the_decoder": 9
+  },
+  "filtered_counts": {
+    "no_explicit_ai_signal_in_title": 295,
+    "excluded_source": 1314,
+    "deferred_by_per_source_budget": 1075,
+    "exact_identity_duplicate": 2
+  },
+  "input_export_validation": "PASS",
+  "files": {
+    "incremental.jsonl": {
+      "sha256": "121a4c4cb793285b69ed790a55b7bda087472fb62dbfd5bdf0f5778ac4b369bf",
+      "bytes": 176888
+    },
+    "source_status.json": {
+      "sha256": "0d32c5402ff20705810d7d0688c740fc8c248cec8a1e902187885b7d58167c4e",
+      "bytes": 32846
+    },
+    "digest-pointer.json": {
+      "sha256": "110639098f7ae2d11d3b4548d844e3e7f52109db1140e6d26f90ca7e1baf28ed",
+      "bytes": 414
+    }
+  },
+  "limitations": [
+    "首次入库不等于今日发布",
+    "精确URL/arXiv归组不等于事件语义去重",
+    "标题过滤及每源预算是编辑召回策略，不能保证完整或事实正确",
+    "榜单、产品收录、发现、发布、更新和抓取时间各自保留",
+    "X转录不代表全量点赞或转发",
+    "现有remix归档与新资料包的时间边界不同"
+  ]
 }
