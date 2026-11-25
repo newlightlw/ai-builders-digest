@@ -37,6 +37,27 @@ def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
+REAL_GUARD_PATHS = (
+    '2026-11-25.md',
+    'packages/publications/2026-11-25.json',
+    'packages/publication-latest.json',
+    'packages/latest.json',
+    'packages/2026-11-24/manifest.json',
+    'packages/2026-11-24/digest-pointer.json',
+    'packages/2026-11-24/incremental.jsonl',
+    'packages/2026-11-24/source_status.json',
+)
+
+
+def real_checkout_guard():
+    state = {}
+    for rel in REAL_GUARD_PATHS:
+        path = ROOT / rel
+        state[rel] = path.read_bytes() if path.is_file() else None
+    state['porcelain'] = subprocess.check_output(['git', '-C', str(ROOT), 'status', '--porcelain'])
+    return state
+
+
 def dump(path, obj):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(json.dumps(obj, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -44,11 +65,12 @@ def dump(path, obj):
 
 class RealPackageTests(unittest.TestCase):
     def test_real_frozen_package_is_readable_without_feed_or_writes(self):
+        guard = real_checkout_guard()
         before = subprocess.check_output(['git', '-C', str(ROOT), 'status', '--porcelain'])
         source = lp.inspect_frozen_source(ROOT, now='2026-11-25T09:00:00+08:00')
         after = subprocess.check_output(['git', '-C', str(ROOT), 'status', '--porcelain'])
         self.assertEqual(before, after)
-        self.assertFalse((ROOT / '2026-11-25.md').exists())
+        self.assertEqual(guard, real_checkout_guard())
         self.assertEqual(source['source_commit_sha'], REAL_PACKAGE)
         self.assertEqual(source['source_date'], '2026-11-24')
         self.assertEqual(source['source_cutoff'], REAL_CUTOFF)
@@ -60,7 +82,11 @@ class RealPackageTests(unittest.TestCase):
 
 
 class PublicationTests(unittest.TestCase):
+    def assert_real_checkout_unchanged(self):
+        self.assertEqual(self.real_guard, real_checkout_guard())
+
     def setUp(self):
+        self.real_guard = real_checkout_guard()
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.repo = Path(self.tmp.name) / 'repo'
@@ -186,7 +212,7 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual((self.repo / '2026-11-25.md').read_bytes(), self.body)
         self.assertEqual((self.repo / '2026-11-24.md').read_bytes(), self.historical_digest)
         self.assertFalse((self.repo / 'packages' / '2026-11-25').exists())
-        self.assertFalse((ROOT / '2026-11-25.md').exists())
+        self.assert_real_checkout_unchanged()
         for name in ('manifest.json', 'incremental.jsonl', 'source_status.json', 'digest-pointer.json'):
             subprocess.check_call(['git', '-C', str(self.repo), 'cat-file', '-e', f'{self.package_commit}:packages/2026-11-24/{name}'])
         names = git(self.repo, 'diff-tree', '--no-commit-id', '--name-only', '-r', 'HEAD~1', 'HEAD')
@@ -247,7 +273,7 @@ class PublicationTests(unittest.TestCase):
                 self.publish(publication_date='2026-11-24', body='试图覆盖历史早报\n'.encode(), now='2026-11-24T09:00:00+08:00')
             self.assertEqual((self.repo / '2026-11-24.md').read_bytes(), before)
         self.assertFalse((self.repo / 'packages' / 'publication-latest.json').exists())
-        self.assertFalse((ROOT / '2026-11-25.md').exists())
+        self.assert_real_checkout_unchanged()
         self.assertFalse((self.repo / '2026-11-25.md').exists())
 
     def test_date_regression_keeps_newer_publication(self):
@@ -315,7 +341,7 @@ class PublicationTests(unittest.TestCase):
         self.assertIn('feed-root', completed.stderr)
         self.assertIn('四文件', completed.stderr)
         self.assertFalse((self.repo / '2026-11-25.md').exists())
-        self.assertFalse((ROOT / '2026-11-25.md').exists())
+        self.assert_real_checkout_unchanged()
 
 
 if __name__ == '__main__':
