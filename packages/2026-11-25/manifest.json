@@ -1,0 +1,80 @@
+{
+  "schema_version": "clean-daily-package/1",
+  "date": "2026-11-25",
+  "status": "ready",
+  "cutoff": "2026-11-25T18:00:20.690835+08:00",
+  "created_at": "2026-11-25T18:09:59.921242+08:00",
+  "input_fingerprint": "487099c7c256b50aff5ec13d92165acbe82d17d1a255edbcf624994bac38331d",
+  "input_counts": {
+    "records": 6347,
+    "incremental": 2684,
+    "sources": 83
+  },
+  "retained_source_count": 61,
+  "excluded_source_count": 22,
+  "clean_incremental_count": 161,
+  "source_counts": {
+    "agibot": 2,
+    "alibaba_qwen": 2,
+    "baidu": 1,
+    "claude_articles": 3,
+    "deepseek": 1,
+    "gemini_blog": 2,
+    "kimi": 2,
+    "minimax": 1,
+    "nvidia_technical": 4,
+    "openai_news": 5,
+    "tencent_hunyuan": 1,
+    "xiaomi_mimo": 1,
+    "arxiv": 12,
+    "claude_code_releases": 1,
+    "github_changelog": 1,
+    "github_repository": 5,
+    "hf_blog": 1,
+    "hf_papers": 12,
+    "hkexnews": 2,
+    "sec_edgar": 1,
+    "simon_willison": 4,
+    "yahoo_finance": 7,
+    "betalist": 4,
+    "follow_builders": 25,
+    "futuretools": 1,
+    "hn_show": 15,
+    "sam_altman": 4,
+    "36kr": 12,
+    "ithome": 8,
+    "kazike_wechat": 1,
+    "techcrunch_ai": 11,
+    "the_decoder": 8,
+    "xiaohongshu_tech_wechat": 1
+  },
+  "filtered_counts": {
+    "no_explicit_ai_signal_in_title": 314,
+    "excluded_source": 1354,
+    "navigation_or_shared_listing": 3,
+    "deferred_by_per_source_budget": 852
+  },
+  "input_export_validation": "PASS",
+  "files": {
+    "incremental.jsonl": {
+      "sha256": "a133ac3cc57bb3152ed45688c4e7fd4cd3b946eab494dc5dd26ff17d6d877feb",
+      "bytes": 144502
+    },
+    "source_status.json": {
+      "sha256": "1b2ed937e717831c46fb9b1595960f5b9ee91891a928a3f7eceba08e0019c9ee",
+      "bytes": 32820
+    },
+    "digest-pointer.json": {
+      "sha256": "6b913947ceeddafc50dbe7d438ad962b039834e12bf5103e9c931bc2f74477df",
+      "bytes": 414
+    }
+  },
+  "limitations": [
+    "首次入库不等于今日发布",
+    "精确URL/arXiv归组不等于事件语义去重",
+    "标题过滤及每源预算是编辑召回策略，不能保证完整或事实正确",
+    "榜单、产品收录、发现、发布、更新和抓取时间各自保留",
+    "X转录不代表全量点赞或转发",
+    "现有remix归档与新资料包的时间边界不同"
+  ]
+}
