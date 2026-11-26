@@ -1,0 +1,83 @@
+{
+  "schema_version": "clean-daily-package/1",
+  "date": "2026-11-26",
+  "status": "ready",
+  "cutoff": "2026-11-26T18:03:58.694079+08:00",
+  "created_at": "2026-11-26T18:12:19.065088+08:00",
+  "input_fingerprint": "ad4dbb1bda356c067ce4989524fe07bba6b67de44fc21db96d887ef23ebef316",
+  "input_counts": {
+    "records": 6948,
+    "incremental": 2492,
+    "sources": 83
+  },
+  "retained_source_count": 61,
+  "excluded_source_count": 22,
+  "clean_incremental_count": 160,
+  "source_counts": {
+    "agibot": 2,
+    "alibaba_qwen": 3,
+    "anthropic_engineering": 1,
+    "baidu": 3,
+    "deepmind": 1,
+    "deepseek": 2,
+    "google_research": 1,
+    "kuaishou_kling": 1,
+    "microsoft_ai": 2,
+    "nvidia_technical": 3,
+    "stepfun": 1,
+    "tencent_hunyuan": 1,
+    "unitree": 2,
+    "xiaomi_mimo": 1,
+    "zhipu": 1,
+    "arxiv": 12,
+    "github_changelog": 1,
+    "github_repository": 3,
+    "github_trending": 1,
+    "hf_blog": 4,
+    "hf_papers": 12,
+    "hkexnews": 2,
+    "sec_edgar": 3,
+    "simon_willison": 5,
+    "yahoo_finance": 7,
+    "betalist": 5,
+    "follow_builders": 25,
+    "hn_show": 15,
+    "product_hunt": 2,
+    "sam_altman": 2,
+    "36kr": 6,
+    "ithome": 12,
+    "kazike_wechat": 1,
+    "techcrunch_ai": 9,
+    "the_decoder": 7,
+    "xiaohongshu_tech_wechat": 1
+  },
+  "filtered_counts": {
+    "no_explicit_ai_signal_in_title": 290,
+    "excluded_source": 1220,
+    "deferred_by_per_source_budget": 821,
+    "exact_identity_duplicate": 1
+  },
+  "input_export_validation": "PASS",
+  "files": {
+    "incremental.jsonl": {
+      "sha256": "ca2206642a8f0fee0332901802efd00fee9cbdac38212f27cdefb41c5bb480e6",
+      "bytes": 143464
+    },
+    "source_status.json": {
+      "sha256": "c1e713667dac10380454a673882e44803f7d4ea38ed45af2fd6c21cea15db310",
+      "bytes": 32843
+    },
+    "digest-pointer.json": {
+      "sha256": "f7966b2896e2b2579538faea4e862404c49ee47fd5055a94d6d6a4a2f2154520",
+      "bytes": 414
+    }
+  },
+  "limitations": [
+    "首次入库不等于今日发布",
+    "精确URL/arXiv归组不等于事件语义去重",
+    "标题过滤及每源预算是编辑召回策略，不能保证完整或事实正确",
+    "榜单、产品收录、发现、发布、更新和抓取时间各自保留",
+    "X转录不代表全量点赞或转发",
+    "现有remix归档与新资料包的时间边界不同"
+  ]
+}
