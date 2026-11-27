@@ -1,0 +1,24 @@
+{
+  "schema_version": "daily-publication/1",
+  "status": "ready",
+  "publication_date": "2026-11-27",
+  "digest_path": "2026-11-27.md",
+  "digest_sha256": "767a34885250b4ca5d53345fb62c880166e80611d56b39da9f0c17eaf0f5f576",
+  "digest_commit": "411d2b86ca0729caff29a06c0ca1fe637515aa3c",
+  "source_date": "2026-11-26",
+  "source_cutoff": "2026-11-26T18:03:58.694079+08:00",
+  "source_commit_sha": "867cdad842007fdbd3a000985f35a6ef5e3907f0",
+  "source_package_path": "packages/2026-11-26/",
+  "source_manifest_sha256": "34a4a036b413b11757bf972c552bfbad92bfbcb04b7994ceb5568f31ac2d9bc2",
+  "source_role": "frozen_validated_package",
+  "collection_created": false,
+  "relationship": "publication_date 是北京时间早报发布日；source_date 与 source_cutoff 是前一晚已验证的冻结日包，不是新采集。",
+  "coverage": {
+    "clean_incremental_count": 160,
+    "incremental_lines": 160,
+    "source_status_count": 83
+  },
+  "lag_over_36h": false,
+  "lag_hours": 13.2696,
+  "lag_notice": null
+}
