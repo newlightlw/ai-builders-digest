@@ -1,0 +1,72 @@
+{
+  "schema_version": "clean-daily-package/1",
+  "date": "2026-11-27",
+  "status": "ready",
+  "cutoff": "2026-11-27T18:03:46.170290+08:00",
+  "created_at": "2026-11-27T18:15:28.170577+08:00",
+  "input_fingerprint": "33aad8ae2258a0bba06929da81cdee812a2ae1bad9b1cb91438722562c475532",
+  "input_counts": {
+    "records": 5796,
+    "incremental": 1431,
+    "sources": 83
+  },
+  "retained_source_count": 61,
+  "excluded_source_count": 22,
+  "clean_incremental_count": 119,
+  "source_counts": {
+    "alibaba_qwen": 5,
+    "baidu": 1,
+    "deepseek": 2,
+    "minimax": 2,
+    "nvidia_blog": 1,
+    "stepfun": 1,
+    "tencent_hunyuan": 1,
+    "unitree": 3,
+    "xiaomi_mimo": 1,
+    "github_repository": 1,
+    "hf_blog": 2,
+    "hf_papers": 12,
+    "hkexnews": 1,
+    "simon_willison": 2,
+    "yahoo_finance": 10,
+    "betalist": 4,
+    "follow_builders": 19,
+    "futuretools": 2,
+    "hn_show": 15,
+    "product_hunt": 4,
+    "sam_altman": 5,
+    "36kr": 8,
+    "ithome": 9,
+    "techcrunch_ai": 1,
+    "the_decoder": 6,
+    "xiaohongshu_tech_wechat": 1
+  },
+  "filtered_counts": {
+    "no_explicit_ai_signal_in_title": 247,
+    "excluded_source": 1033,
+    "deferred_by_per_source_budget": 32
+  },
+  "input_export_validation": "PASS",
+  "files": {
+    "incremental.jsonl": {
+      "sha256": "1db1269e79c2883753f56e08c8ccef486e5fb604c400e7867e396592c3e1c653",
+      "bytes": 105710
+    },
+    "source_status.json": {
+      "sha256": "0c3fa7c405218dedbe78b484e8ab6e0312b57f4c9c2049e31716358a34f8dab1",
+      "bytes": 32779
+    },
+    "digest-pointer.json": {
+      "sha256": "fe579b926212addbf6f15b6ab3eda19fcd4e33d6ef0326da74e93e174b94f2b0",
+      "bytes": 414
+    }
+  },
+  "limitations": [
+    "首次入库不等于今日发布",
+    "精确URL/arXiv归组不等于事件语义去重",
+    "标题过滤及每源预算是编辑召回策略，不能保证完整或事实正确",
+    "榜单、产品收录、发现、发布、更新和抓取时间各自保留",
+    "X转录不代表全量点赞或转发",
+    "现有remix归档与新资料包的时间边界不同"
+  ]
+}

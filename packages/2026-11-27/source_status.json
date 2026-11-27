@@ -1,0 +1,1116 @@
+[
+  {
+    "source_id": "36kr",
+    "name": "36氪",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 50,
+    "package_incremental_count": 8,
+    "source_decision": "keep",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "agibot",
+    "name": "智元官方开发",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 3,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "ai_bot_tools",
+    "name": "AI工具集",
+    "status": "failed",
+    "history_coverage": "unknown",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "tls_error"
+    ]
+  },
+  {
+    "source_id": "ai_news",
+    "name": "Artificial Intelligence News",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 23,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "aibase",
+    "name": "AIbase",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 20,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "alibaba_qwen",
+    "name": "阿里/千问官方技术",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 26,
+    "package_incremental_count": 5,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "anthropic_engineering",
+    "name": "Anthropic Engineering",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "anthropic_news",
+    "name": "Anthropic News",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "arxiv",
+    "name": "arXiv研究发现",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1041,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "baidu",
+    "name": "百度官方技术与IR",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 3,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "betalist",
+    "name": "BetaList",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 25,
+    "package_incremental_count": 4,
+    "source_decision": "keep",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "bloomberg_tech",
+    "name": "Bloomberg Technology",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 20,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "boston_dynamics",
+    "name": "Boston Dynamics官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 3,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "bytedance_seed",
+    "name": "字节Seed/火山官方",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "no_verified_items",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "canva_design_school",
+    "name": "Canva Design School",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 10,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "claude_articles",
+    "name": "Claude官方文章",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 8,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "claude_code_releases",
+    "name": "Claude Code Releases",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "cninfo",
+    "name": "巨潮资讯",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "cursor_blog",
+    "name": "Cursor Blog",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "cursor_changelog",
+    "name": "Cursor Changelog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "dario_amodei",
+    "name": "Dario Amodei个人文章",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "deepmind",
+    "name": "Google DeepMind Blog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "deepseek",
+    "name": "DeepSeek官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 6,
+    "package_incremental_count": 2,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "tls_error",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "emad_mostaque",
+    "name": "Emad Mostaque",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "sitemap_rules_no_match",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "figure",
+    "name": "Figure官方",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "follow_builders",
+    "name": "follow-builders",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 209,
+    "package_incremental_count": 19,
+    "source_decision": "keep",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "futuretools",
+    "name": "FutureTools",
+    "status": "partial",
+    "history_coverage": "snapshot_last10",
+    "input_count": 10,
+    "package_incremental_count": 2,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "gemini_blog",
+    "name": "Gemini官方博客",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "github_changelog",
+    "name": "GitHub Changelog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "github_repository",
+    "name": "重点GitHub仓库元信息与Releases",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 9,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "github_trending",
+    "name": "GitHub Trending日周榜",
+    "status": "partial",
+    "history_coverage": "snapshot_last10",
+    "input_count": 10,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "google_ai_topic",
+    "name": "Google AI主题博客",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "google_news",
+    "name": "Google News",
+    "status": "blocked",
+    "history_coverage": "not_available",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "disabled_by_existing_access_policy"
+    ]
+  },
+  {
+    "source_id": "google_research",
+    "name": "Google Research Blog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "hf_blog",
+    "name": "Hugging Face Blog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 6,
+    "package_incremental_count": 2,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "hf_papers",
+    "name": "Hugging Face Papers",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 166,
+    "package_incremental_count": 12,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "hkexnews",
+    "name": "港交所披露易",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 5,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "hn_show",
+    "name": "Show HN",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 485,
+    "package_incremental_count": 15,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "hn_top",
+    "name": "Hacker News热点",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 3129,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "huawei",
+    "name": "华为盘古/年报",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 3,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "no_verified_items",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "huxiu",
+    "name": "虎嗅",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 18,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "ithome",
+    "name": "IT之家",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 60,
+    "package_incremental_count": 9,
+    "source_decision": "keep",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "kazike_wechat",
+    "name": "数字生命卡兹克",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 9,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "kimi",
+    "name": "Kimi官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 11,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "kuaishou_kling",
+    "name": "快手/可灵官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "marktechpost",
+    "name": "MarkTechPost",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 6,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "meta_ai",
+    "name": "Meta AI Blog",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "microsoft_ai",
+    "name": "Microsoft AI Source",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "microsoft_research",
+    "name": "Microsoft Research",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "minimax",
+    "name": "MiniMax官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 6,
+    "package_incremental_count": 2,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "no_verified_items",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "mit_news_ai",
+    "name": "MIT News / Artificial intelligence",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "nvidia_blog",
+    "name": "NVIDIA Blog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "nvidia_ir",
+    "name": "NVIDIA IR",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "nvidia_technical",
+    "name": "NVIDIA Technical Blog",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 7,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "one_useful_thing",
+    "name": "One Useful Thing / Ethan Mollick",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "openai_news",
+    "name": "OpenAI News",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "openclaw_news",
+    "name": "OpenClaw官方内容",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "physical_intelligence",
+    "name": "Physical Intelligence官方",
+    "status": "failed",
+    "history_coverage": "unknown",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "rate_limited_429"
+    ]
+  },
+  {
+    "source_id": "product_hunt",
+    "name": "Product Hunt",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 41,
+    "package_incremental_count": 4,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "readhub_ai",
+    "name": "Readhub AI",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 10,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "sam_altman",
+    "name": "Sam Altman个人博客",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 17,
+    "package_incremental_count": 5,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "sec_edgar",
+    "name": "SEC EDGAR",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 48,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "semianalysis",
+    "name": "SemiAnalysis",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "shopify_blog",
+    "name": "Shopify官方电商与营销博客",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 21,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "simon_willison",
+    "name": "Simon Willison",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 7,
+    "package_incremental_count": 2,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "stepfun",
+    "name": "阶跃星辰官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 1,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "techcrunch_ai",
+    "name": "TechCrunch AI",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 24,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "techmeme",
+    "name": "Techmeme",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 15,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "techradar_ai",
+    "name": "TechRadar AI",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "tencent_hunyuan",
+    "name": "腾讯混元/元宝官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 4,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "tls_error",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "tesla_ir",
+    "name": "Tesla IR",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 6,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "access_restricted_403",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "the_decoder",
+    "name": "The Decoder",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 23,
+    "package_incremental_count": 6,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "unitree",
+    "name": "宇树官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 4,
+    "package_incremental_count": 3,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "v2ex",
+    "name": "V2EX技术与AI节点",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 123,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "verge_ai",
+    "name": "The Verge AI",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 10,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "waytoagi",
+    "name": "WaytoAGI社区日报",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "tls_error",
+      "older_capture_only",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "workbuddy_official",
+    "name": "WorkBuddy官方文档与更新日志",
+    "status": "empty_partial",
+    "history_coverage": "available_history_only",
+    "input_count": 0,
+    "package_incremental_count": 0,
+    "source_decision": "exclude",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "tls_error",
+      "older_capture_only",
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "xai_news",
+    "name": "xAI News",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 1,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "xiaohongshu_tech_wechat",
+    "name": "小红书技术REDtech",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 5,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "xiaomi_mimo",
+    "name": "小米MiMo/产品官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 1,
+    "package_incremental_count": 1,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "yahoo_finance",
+    "name": "Yahoo Finance",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 17,
+    "package_incremental_count": 10,
+    "source_decision": "keep",
+    "window_start": "2026-11-20T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "available_inventory_not_complete_history"
+    ]
+  },
+  {
+    "source_id": "yc_launch",
+    "name": "YC Launch",
+    "status": "ok",
+    "history_coverage": "window_complete",
+    "input_count": 2,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-24T18:03:58.694079+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": []
+  },
+  {
+    "source_id": "zhipu",
+    "name": "智谱官方",
+    "status": "partial",
+    "history_coverage": "available_history_only",
+    "input_count": 3,
+    "package_incremental_count": 0,
+    "source_decision": "keep",
+    "window_start": "2026-11-13T18:03:46.170290+08:00",
+    "cutoff": "2026-11-27T18:03:46.170290+08:00",
+    "issues": [
+      "tls_error",
+      "available_inventory_not_complete_history"
+    ]
+  }
+]

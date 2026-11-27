@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-27",
+  "status": "archived",
+  "digest_path": "2026-11-27.md",
+  "commit_sha": "dc945f495a43a4dc2e9712602e454bebf37f434a",
+  "sha256": "767a34885250b4ca5d53345fb62c880166e80611d56b39da9f0c17eaf0f5f576",
+  "relationship": "existing_same_calendar_date_remix; not generated from this later collection package",
+  "digest_cutoff": null,
+  "collection_cutoff": "2026-11-27T18:03:46.170290+08:00"
+}
