@@ -1,0 +1,71 @@
+{
+  "schema_version": "clean-daily-package/1",
+  "date": "2026-11-28",
+  "status": "ready",
+  "cutoff": "2026-11-28T18:03:47.715286+08:00",
+  "created_at": "2026-11-28T19:28:36.540668+08:00",
+  "input_fingerprint": "f5f472db827a623ca3ca5d25063acc66bdcdb3a8e3f9b0cb06ceab366e684ab8",
+  "input_counts": {
+    "records": 4614,
+    "incremental": 1366,
+    "sources": 83
+  },
+  "retained_source_count": 61,
+  "excluded_source_count": 22,
+  "clean_incremental_count": 110,
+  "source_counts": {
+    "agibot": 1,
+    "alibaba_qwen": 2,
+    "baidu": 3,
+    "boston_dynamics": 1,
+    "kimi": 2,
+    "minimax": 1,
+    "stepfun": 1,
+    "tencent_hunyuan": 1,
+    "xiaomi_mimo": 2,
+    "github_repository": 1,
+    "hf_blog": 1,
+    "hf_papers": 6,
+    "hkexnews": 1,
+    "simon_willison": 2,
+    "yahoo_finance": 9,
+    "betalist": 5,
+    "follow_builders": 23,
+    "hn_show": 15,
+    "product_hunt": 3,
+    "sam_altman": 4,
+    "36kr": 6,
+    "ithome": 13,
+    "kazike_wechat": 1,
+    "semianalysis": 1,
+    "the_decoder": 5
+  },
+  "filtered_counts": {
+    "no_explicit_ai_signal_in_title": 239,
+    "excluded_source": 1000,
+    "deferred_by_per_source_budget": 17
+  },
+  "input_export_validation": "PASS",
+  "files": {
+    "incremental.jsonl": {
+      "sha256": "d4d5be24a60d0e987e7ccd249ef762017c4f10a53d8bbd47318697f492297b84",
+      "bytes": 97141
+    },
+    "source_status.json": {
+      "sha256": "f9a1ee2e61d20366c673387da269c5bfa27e1224e9520eb84f330d2af4d3160c",
+      "bytes": 32615
+    },
+    "digest-pointer.json": {
+      "sha256": "f84d7e09a3044ac85cec632f867255b9bd67abbc8ef8c84eb15c51030645a618",
+      "bytes": 414
+    }
+  },
+  "limitations": [
+    "首次入库不等于今日发布",
+    "精确URL/arXiv归组不等于事件语义去重",
+    "标题过滤及每源预算是编辑召回策略，不能保证完整或事实正确",
+    "榜单、产品收录、发现、发布、更新和抓取时间各自保留",
+    "X转录不代表全量点赞或转发",
+    "现有remix归档与新资料包的时间边界不同"
+  ]
+}
