@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "status": "ready",
-  "commit_sha": "6733481ba56f621379dba623708ff880148ce0ce",
-  "digest_path": "2026-11-27.md",
-  "package_path": "packages/2026-11-27/",
-  "cutoff": "2026-11-27T18:03:46.170290+08:00"
+  "commit_sha": "cefbf0e163559f17d579b03dd7b5a50b44a10304",
+  "digest_path": "2026-11-28.md",
+  "package_path": "packages/2026-11-28/",
+  "cutoff": "2026-11-28T18:03:47.715286+08:00"
 }
